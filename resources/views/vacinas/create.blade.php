@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
                     <p class="text-center font-bold">CADASTRO DE VACINA PARA O PET {{ $pet->nome}}</p>
-                    <form method="POST" action="{{ route('vacinas.store', $pet->id) }}">
+                    <form method="POST" action="{{ route('vacinas.store', $pet->id) }}" enctype="multipart/form-data">
                         @csrf
 
                         <input type="hidden" id="pet_id" name="pet_id" value="{{ $pet->id}}">

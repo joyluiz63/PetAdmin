@@ -21,12 +21,12 @@
 
                 <div class="p-6 text-gray-900 flex flex-col items-center">
                     <p><strong>Nome: </strong>{{$vacina->nome}}</p>
+                    <p><strong>Dose: </strong>{{$vacina->dose }}</p>
                     <p><strong>Agendada: </strong>{{ date('d-m-Y', strtotime($vacina->agendada)) }}</p>
                     <p><strong>Aplicada: </strong>{{ date('d-m-Y', strtotime($vacina->aplicada)) }}</p>
                     <p><strong>Clinica: </strong>{{$vacina->clinica}}</p>
                     <p><strong>Doença(s): </strong>{{$vacina->doenca}}</p>
-                    <p><strong>Dose: </strong>{{$vacina->dose }}</p>
-
+                    <p><img src="{{ asset('storage/' . $vacina->image) }}" alt="foto" class="w-56"></p>
                 </div>
 
                 <div class="flex gap-4 justify-center">

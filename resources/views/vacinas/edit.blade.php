@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-black">
 
-                    <form method="POST" action="{{ route('vacinas.update', $vacina->id) }}">
+                    <form method="POST" action="{{ route('vacinas.update', $vacina->id) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 

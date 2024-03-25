@@ -43,7 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::resources([
         'pets'          => PetController::class,
         'vacinas'       => VacinaController::class,
-        'petsPhotos'    => PetPhotoController::class,
+        'pet_photos'    => PetPhotoController::class,
         'users'         => UserController::class,
         'medicamentos'  => MedicamentoController::class,
         'consultas'     => ConsultaController::class,
@@ -56,6 +56,9 @@ Route::middleware('auth')->group(function () {
     Route::get('medicamentos/create/{petId}', [MedicamentoController::class, 'create'])->name('medicamentos.create');
     Route::get('/consultas.meuPet/{id}', [ConsultaController::class, 'meuPet'])->name('consultas.meuPet');
     Route::get('consultas/create/{petId}', [ConsultaController::class, 'create'])->name('consultas.create');
+
+    Route::get('/pet_photos.meuPet/{id}', [PetPhotoController::class, 'meuPet'])->name('pet_photos.meuPet');
+    Route::get('pet_photos/create/{petId}', [PetPhotoController::class, 'create'])->name('pet_photos.create');
 
 });
 

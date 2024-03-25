@@ -6,7 +6,6 @@ use App\Models\Pet;
 use App\Models\Vacina;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class VacinaController extends Controller
@@ -42,11 +41,14 @@ class VacinaController extends Controller
      */
     public function store(Request $request)
     {
+        // Variavel $data recebe todos os dados vindo fo form atraves do request
         $data = $request->all();
         $pet_id = $data['pet_id'];
 
+        // Alterar no arquivo  config/filesystems.php: 'default' => env('FILESYSTEM_DISK', 'local'), para 'default' => env('FILESYSTEM_DISK', 'public'),
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
 
+            // Lembrar de acrescentar enctype="multipart/form-data" no form
             $ImagePath = $request->image->store('img/vacinas', 'public');
             $data['image'] = $ImagePath;
         }
@@ -70,8 +72,6 @@ class VacinaController extends Controller
      */
     public function edit(Vacina $vacina)
     {
-        //$apartamentos = Apartamento::orderBy('bloco')->orderBy('apartamento')->get();
-
         return view('vacinas.edit', compact('vacina'));
     }
 

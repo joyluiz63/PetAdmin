@@ -56,7 +56,12 @@
                     </table>
 
                 </div>
-                {{ $vacinas->links() }}
+
+                <div class="flex justify-end">
+                    {{ $vacinas->links() }}
+                </div>
+
+
             </div>
         </div>
     </div>
