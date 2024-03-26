@@ -38,9 +38,6 @@
                                 <td><a href="{{ route('pet_photos.meuPet', $pet->id)}}" class="bg-green-900 text-white font-semibold mx-4 py-1 px-2"><i class="fa-solid fa-camera px-2"></i>Album de Fotos</a> </td>
                             </tr>
                             @endforeach
-
-
-
                         </tbody>
                     </table>
                     {{$pets->links() }}

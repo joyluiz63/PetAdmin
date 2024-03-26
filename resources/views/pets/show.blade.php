@@ -26,7 +26,7 @@
                     <p><strong>Raça: </strong>{{$pet->raca}}</p>
                     <p><strong>Côr: </strong>{{$pet->cor}}</p>
                     <p><strong>Sexo: </strong>{{$pet->nome}}</p>
-                    <p><strong>Idade: </strong>{{ $pet->idade }}</p>
+                    <p><strong>Idade: </strong>{{ calculaIdade($pet->nascimento) }}</p>
                     <p><strong>Data de Nascimento: </strong>{{ date('d-m-Y', strtotime($pet->nascimento)) }}</p>
                     <p><strong>Tutor: </strong>{{$pet->tutor}}</p>
 
