@@ -7,6 +7,16 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+Projeto criado para auxiliar na manutenção de seu(s) pet(s). 
+Funções:
+ * Controle de Vacinas
+ * Controle de medicamentos
+ * Controle de desparisatação interna e externa
+ * Controle de consulta veterinárias
+ * Album de fotos
+
+Este projeto foi criado com o framework Laravel na versão 10;
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
