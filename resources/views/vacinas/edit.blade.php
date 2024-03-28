@@ -24,8 +24,7 @@
                             <div class="w-full mb-4">
                                 <label for="aplicada" class="block mb-2 text-sm">Aplicado em::</label>
                                 <input type="date" id="aplicada" name="aplicada" value="{{$vacina->aplicada}}"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    required>
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             </div>
 
                             <div class="w-full mb-4">

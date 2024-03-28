@@ -17,10 +17,15 @@
 
                         <div class="grid grid-cols-3 gap-4 justify-items-center ">
                             <div class="w-full mb-4">
+                                <label for="agendada" class="block mb-2 text-sm">Agendada para:</label>
+                                <input type="date" id="agendada" name="agendada"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            </div>
+
+                            <div class="w-full mb-4">
                                 <label for="realizada" class="block mb-2 text-sm">Consultou em:</label>
                                 <input type="date" id="realizada" name="realizada"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    required>
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             </div>
 
                             <div class="w-full mb-4">

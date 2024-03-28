@@ -14,7 +14,7 @@
 
 
                     <p class="text-lg">
-                        Exibindo Detalhes do Pet {{$pet->nome}}
+                        Exibindo Informações do Pet {{$pet->nome}}
                     </p>
 
                 </div>

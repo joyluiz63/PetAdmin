@@ -14,7 +14,7 @@
 
 
                     <p class="text-lg">
-                        Exibindo Detalhes da foto
+                        Exibindo Informações da foto
                     </p>
 
                 </div>

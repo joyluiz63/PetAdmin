@@ -35,14 +35,23 @@
                     <table class="table table-auto">
                         <thead>
                             <tr>
-                                <th>Vacinas do Pet {{ $pet->nome }} cadastrados:</th>
+                                <th>Vacina</th>
+                                <th>Dose</th>
+                                <th>Aplicado em</th>
+                                <th>Doença(s)</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($vacinas as $vacina)
                                 <tr class="hover:bg-blue-200">
                                     <td class="border border-1 border-blue-400">{{ $vacina->nome }}</td>
-                                    <td class="border border-1 border-blue-400">Dose: {{ $vacina->dose }}</td>
+                                    <td class="border border-1 border-blue-400">{{ $vacina->dose }}</td>
+                                    <td class="border border-1 border-blue-400">
+                                        @if($vacina->aplicada)
+                                        {{ date('d-m-Y', strtotime($vacina->aplicada)) }}
+                                        @else Não Aplicada
+                                        @endif
+                                    </td>
                                     <td class="border border-1 border-blue-400">{{ $vacina->doenca }}</td>
                                     <td class="px-4"><a href="{{ route('vacinas.show', $vacina->id) }}"
                                             class="bg-yellow-500 text-white font-semibold px-1 py-1"><i

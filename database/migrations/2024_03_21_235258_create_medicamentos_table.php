@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('uso');// Externo ou Interno
             $table->string('obs')->nullable();// Modo de uso ou outra observação
             $table->date('aplicado')->nullable();
-            $table->integer('repetir')->nullable();// Repetir em quantos dias
+            $table->date('repetir')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

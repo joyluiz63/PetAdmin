@@ -14,13 +14,18 @@
 
 
                     <p class="text-lg">
-                        Exibindo Detalhes de Consulta
+                        Exibindo Informações de Consulta
                     </p>
 
                 </div>
 
                 <div class="p-6 text-gray-900 flex flex-col items-center">
-                    <p><strong>Consultou em: </strong>{{ date('d-m-Y', strtotime($consulta->realizada)) }}</p>
+                    <p><strong>Agendado para: </strong>
+                        @if($consulta->agendada) {{ date('d-m-Y', strtotime($consulta->agendada)) }}
+                        @else  @endif</p>
+                    <p><strong>Consultou em: </strong>
+                        @if($consulta->realizada) {{ date('d-m-Y', strtotime($consulta->realizada)) }}
+                        @else  @endif</p>
                     <p><strong>Clinica: </strong>{{$consulta->clinica}}</p>
                     <p><strong>Profissional: </strong>{{ $consulta->profissional }}</p>
                     <p><strong>Motivo: </strong>{{ $consulta->motivo }}</p>

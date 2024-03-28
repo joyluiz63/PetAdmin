@@ -12,7 +12,7 @@ class Consulta extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'pet_id', 'realizada', 'clinica', 'profissional',
+        'pet_id', 'agendada', 'realizada', 'clinica', 'profissional',
         'motivo', 'diagnostico', 'conduta'
     ];
 

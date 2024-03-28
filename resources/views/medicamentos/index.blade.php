@@ -50,7 +50,7 @@
                                     <td class="border border-1 border-blue-400">{{ $medicamento->categoria }}</td>
                                     <td class="border border-1 border-blue-400">
                                         {{ date('d-m-Y', strtotime($medicamento->aplicado)) }}</td>
-                                    <td class="border border-1 border-blue-400">{{ $medicamento->repetir }} Dias</td>
+                                    <td class="border border-1 border-blue-400">{{ $medicamento->repetir }}</td>
                                     <td class="px-4"><a href="{{ route('medicamentos.show', $medicamento->id) }}"
                                             class="bg-yellow-500 text-white font-semibold px-1 py-1"><i
                                                 class="fa-solid fa-eye px-2"></i>Ver</a> </td>

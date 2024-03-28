@@ -68,10 +68,10 @@
                             </div>
 
                             <div class="w-full mb-4">
-                                <label for="repetir" class="block mb-2 text-sm">Repetir( em dias)</label>
-                                <input type="number" id="repetir" name="repetir" value="{{ $medicamento->repetir}}"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    placeholder="Em dias">
+                                <label for="repetir" class="block mb-2 text-sm">Repetir em:</label>
+                                <input type="date" id="repetir" name="repetir" value="{{ $medicamento->repetir}}"
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
+
                             </div>
                         </div>
 

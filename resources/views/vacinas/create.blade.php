@@ -19,22 +19,19 @@
                             <div class="w-full mb-4">
                                 <label for="agendada" class="block mb-2 text-sm">Agendado para:</label>
                                 <input type="date" id="agendada" name="agendada"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    required>
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             </div>
 
                             <div class="w-full mb-4">
                                 <label for="aplicada" class="block mb-2 text-sm">Aplicado em::</label>
                                 <input type="date" id="aplicada" name="aplicada"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    required>
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             </div>
 
                             <div class="w-full mb-4">
                                 <label for="clinica" class="block mb-2 text-sm">Clínica:</label>
                                 <input type="text" id="clinica" name="clinica"
-                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                                    required>
+                                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500">
                             </div>
 
                             <div class="w-full mb-4">

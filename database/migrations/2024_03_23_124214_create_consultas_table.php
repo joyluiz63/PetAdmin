@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('consultas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('pet_id')->constrained('pets');
-            $table->date('realizada');
+            $table->date('agendada')->nullable();
+            $table->date('realizada')->nullable();
             $table->string('clinica')->nullable();
             $table->string('profissional')->nullable();
-            $table->string('motivo')->nullable();
+            $table->string('motivo');
             $table->string('diagnostico')->nullable();
             $table->string('conduta')->nullable();
             $table->softDeletes();

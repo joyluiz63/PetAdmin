@@ -45,7 +45,10 @@
                         <tbody>
                             @foreach ($consultas as $consulta)
                                 <tr class="hover:bg-blue-200">
-                                    <td class="border border-slate-600">{{ date('d-m-Y', strtotime($consulta->realizada)) }}</td>
+                                    <td class="border border-slate-600">
+                                        @if($consulta->realizada) {{ date('d-m-Y', strtotime($consulta->realizada)) }}
+                                        @else  @endif</p>
+                                    </td>
                                     <td class="border border-slate-600">{{ $consulta->clinica }}</td>
                                     <td class="border border-slate-600">{{ $consulta->profissional }}</td>
                                     <td class="border border-slate-600">{{ $consulta->motivo }}</td>

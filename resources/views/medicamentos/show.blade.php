@@ -26,7 +26,10 @@
                     <p><strong>Uso: </strong>{{ $medicamento->uso }}</p>
                     <p><strong>Observação: </strong>{{$medicamento->obs}}</p>
                     <p><strong>Aplicado em: </strong>{{ date('d-m-Y', strtotime($medicamento->aplicado)) }}</p>
-                    <p><strong>Repetir em: </strong>{{$medicamento->repetir }} dias</p>
+                    <p><strong>Repetir em: </strong>
+                        @if($medicamento->repetir) {{ date('d-m-Y', strtotime($medicamento->repetir)) }}
+                        @else Não agendado
+                        @endif  </p>
 
                 </div>
 

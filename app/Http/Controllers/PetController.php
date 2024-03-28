@@ -6,7 +6,6 @@ use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class PetController extends Controller
 {
@@ -17,14 +16,8 @@ class PetController extends Controller
 
             return view('pets.index', compact('pets'));
         } else{
-            //$user = User::where('id', Auth::user()->id)->first();
-            //$pets = $user->pets()->paginate('5');
-
-            $pets = DB::table('pets')
-            ->select('*')
-            ->selectRaw('TIMESTAMPDIFF(YEAR, nascimento, CURDATE()) as idade')
-            ->where('user_id', '=', Auth::user()->id )
-            ->paginate('5');
+            $user = User::where('id', Auth::user()->id)->first();
+            $pets = $user->pets()->paginate('5');
 
             return view('pets.index', compact('pets'));
         }
@@ -44,7 +37,9 @@ class PetController extends Controller
 
     public function show(Pet $pet)
     {
-        return view('pets.show', ['pet' => $pet]);
+        return view('pets.show', [
+            'pet' => $pet
+        ]);
     }
 
     public function photo(Pet $pet)

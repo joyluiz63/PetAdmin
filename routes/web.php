@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\ConsultaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MedicamentoController;
@@ -49,7 +50,8 @@ Route::middleware('auth')->group(function () {
         'consultas'     => ConsultaController::class,
     ]);
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+    Route::get('/agendas.meuPet/{id}', [AgendaController::class, 'meuPet'])->name('agendas.meuPet');
     Route::get('/vacinas.meuPet/{id}', [VacinaController::class, 'meuPet'])->name('vacinas.meuPet');
     Route::get('vacinas/create/{petId}', [VacinaController::class, 'create'])->name('vacinas.create');
     Route::get('/medicamentos.meuPet/{id}', [MedicamentoController::class, 'meuPet'])->name('medicamentos.meuPet');

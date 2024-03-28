@@ -13,7 +13,9 @@ class VacinaController extends Controller
     public function meuPet(Pet $id) {
         $pet = Pet::where('id', $id->id)->first();
         //dd($pet);
-        $vacinas = Vacina::where('pet_id', $pet->id)->paginate('5');
+        $vacinas = Vacina::where('pet_id', $pet->id)
+        ->orderBy('aplicada', 'desc')
+        ->paginate('5');
 
         return view('vacinas.index', compact('vacinas', 'pet'));
      }

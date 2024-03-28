@@ -14,7 +14,7 @@
 
 
                     <p class="text-lg">
-                        Exibindo Detalhes da Vacina {{$vacina->nome}}
+                        Exibindo Informações da Vacina {{$vacina->nome}}
                     </p>
 
                 </div>
